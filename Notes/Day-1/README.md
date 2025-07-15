@@ -1,6 +1,7 @@
 Updated System OS
 
 Install below tools on local
+
     Git (git --version)
         git config --global user.name "Your Name"
         git config --global user.email "you@example.com"
@@ -13,6 +14,7 @@ Install below tools on local
     VS Code or your preferred IDE.
 
 AWS setup
+
     Log in to AWS console.
 
     Make sure your AWS CLI is configured (aws configure).
@@ -20,11 +22,13 @@ AWS setup
     Create or verify IAM user with admin rights for practice.
 
 GitHub
+
     Create a new private GitHub repo called 90-days-devops.
 
     Commit a simple README.md
 
 Practise
+
     Write a simple Terraform script to provision an S3 bucket.
 
     Apply it & verify in AWS console.
@@ -35,4 +39,5 @@ Practise
 
 
 Blockers
+
     s3 Bucket name should be Unique Gloablly.
