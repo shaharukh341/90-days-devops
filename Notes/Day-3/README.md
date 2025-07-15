@@ -1,4 +1,11 @@
 ***ec2 instance creation usinf terraform***
+
+## ✅ Day 3: EC2 instance with Terraform
+- Created basic EC2 instance
+- Used variables for AMI, type, region
+- Outputs: instance ID & public IP
+- Destroyed resources to avoid charges
+
 /90-days-devops/
 
  ├── day-3-terraform-Ec2-instance/     
