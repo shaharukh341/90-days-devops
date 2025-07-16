@@ -14,3 +14,6 @@ crash.log
 # Ignore variable override files (optional)
 terraform.tfvars
 terraform.tfvars.json
+
+# Ignore lock Terraform configuration files
+.terraform.lock.hcl
