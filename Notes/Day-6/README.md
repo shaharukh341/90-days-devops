@@ -11,16 +11,27 @@
 ## 📂 Folder Structure
 
 Day-6-remote-state-modules/
+
 ├── backend.tf
+
 ├── dev/
+
 │ ├── main.tf
+
 │ ├── terraform.tfvars
+
 │ ├── outputs.tf
+
 ├── modules/
+
 │ └── ec2-instance/
+
 │ ├── main.tf
+
 │ ├── variables.tf
+
 │ ├── outputs.tf
+
 │ ├── userdata.sh
 
 yaml
