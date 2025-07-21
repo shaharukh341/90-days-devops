@@ -20,4 +20,6 @@ terraform.tfvars.json
 
 # Ignore key files
 .pem
-.ppk
+# Ignore SSH private keys
+Practise/Day-16-advanced-ec2-setup/keys/us-east-1.pem
+Practise/Day-16-advanced-ec2-setup/keys/id_ed25519.pub
