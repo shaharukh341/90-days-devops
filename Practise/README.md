@@ -22,6 +22,7 @@ Welcome to my 90-day DevOps journey! This repository contains all the hands-on p
 | [Day 12](./Day-12-remote-state-management-using-s3-and-dynamodb) | Remote State with S3 + DynamoDB |
 | [Day 13](./day-13-modules) | Reusable Terraform Modules |
 | [Day 14](./Day-14-deep-dive-into-terraform-modules) | Deep Dive into Modules |
+| [Day 15](./Day-15-terraform-provisioners-setup-completed) | Terraform Provisioners Setup Completed |
 
 ---
 
