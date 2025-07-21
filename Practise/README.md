@@ -47,8 +47,8 @@ Welcome to my 90-day DevOps journey! This repository contains all the hands-on p
 
 ## 👨‍💻 Author
 
-**Shaharukh Ahmed**  
-Follow my journey on [LinkedIn](https://www.linkedin.com/in/shaharukh341)
+**Sharukh Ahmed Shaik**  
+Follow my journey on [LinkedIn](https://www.linkedin.com/in/sharukh-ahmed-shaik-3069ab228/)
 
 ---
 
