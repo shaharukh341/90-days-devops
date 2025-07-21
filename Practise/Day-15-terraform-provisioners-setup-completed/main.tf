@@ -1,7 +1,7 @@
-resource "aws_key_pair" "deployer" {
-  key_name   = "us-east-1_1"
-  public_key = file("~/.ssh/id_ed25519.pub") # Make sure this file exists
-}
+#resource "aws_key_pair" "deployer" {
+#  key_name   = "us-east-1"
+#  public_key = file("~/.ssh/id_ed25519.pub") # Make sure this file exists
+#}
 
 resource "aws_security_group" "ssh_access" {
   name        = "allow-ssh"
@@ -34,15 +34,18 @@ resource "aws_instance" "provisioned" {
     inline = [
       "sudo apt update -y",
       "sudo apt install nginx -y",
-      "sudo systemctl start nginx"
+      "sudo systemctl start nginx",
+      "sudo apt install zip -y",
+      "sudo apt install tar -y"
     ]
 
-    connection {
-      type        = "ssh"
-      user        = "ubuntu"
-      private_key = file("~/.ssh/id_ed25519")
-      host        = self.public_ip
-    }
+  connection {
+    type        = "ssh"
+    user        = "ubuntu" # Use "ec2-user" for Amazon Linux
+    private_key = file(var.pem_path)
+    host        = self.public_ip
+    timeout     = "2m"
+  }
   }
 
   tags = {

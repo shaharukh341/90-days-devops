@@ -1,51 +1,21 @@
-# Day-15: Provisioners in Terraform
+# Day-15: Remote Exec Provisioning in Terraform
 
 ## 📌 Objective
-Use Terraform `provisioners` to configure an EC2 instance after creation (e.g., install and start Nginx using `remote-exec`).
+Learn how to automate commands on EC2 after launch using the `remote-exec` provisioner with two approaches:
+
+1. Using an existing `.pem` key file (imported manually to AWS beforehand).
+2. Generating a `.pem` key with Terraform and using it for SSH provisioning.
 
 ---
 
-## 🧱 What We Used
+## ✅ Use Case 1: Using Existing `.pem` File
 
-- **Provider:** AWS (`us-east-1`)
-- **Resource:** `aws_instance`
-- **Provisioner:** `remote-exec`
-- **Key Pair:** SSH key-based access (`~/.ssh/id_rsa.pub`)
-- **Security Group:** Open SSH (port 22)
+### 💡 Scenario
+You already have an EC2 Key Pair created manually via AWS Console or CLI. You want Terraform to:
 
----
+- Launch an EC2 instance using this key.
+- SSH into it via `remote-exec` and run provisioning commands (e.g., install packages).
 
-## 🔧 Files
+### 🗂️ Folder: `day-15-remote-exec-existing-key/`
 
-- `main.tf` — contains all configuration
-- `README.md` — you’re reading it!
-
----
-
-## 🚀 Steps Performed
-
-1. Created a **key pair** from local public SSH key.
-2. Created a **security group** to allow SSH access (port 22).
-3. Launched a **t2.micro** EC2 instance using Ubuntu AMI.
-4. Used a `remote-exec` provisioner to:
-   - Update apt packages.
-   - Install **Nginx**.
-   - Start Nginx service.
-5. Output the public IP address of the instance.
-
----
-
-## ✅ Pre-Requisites
-
-- Terraform installed
-- AWS CLI configured
-- SSH key pair available at `~/.ssh/id_rsa` and `~/.ssh/id_rsa.pub`
-
----
-
-## 💻 Usage
-
-```bash
-terraform init
-terraform plan
-terraform apply
+#### 📁 Structure

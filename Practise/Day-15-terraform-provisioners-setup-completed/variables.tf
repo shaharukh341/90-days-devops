@@ -13,5 +13,10 @@ variable "instance_type" {
 
 variable "key_name" {
   description = "Name of the existing AWS key pair"
-  default     = "us-east-1_1"
+  default     = "us-east-1"
+}
+
+variable "pem_path" {
+  description = "Path to the existing private .pem key file"
+  default     = "keys/us-east-1.pem"
 }

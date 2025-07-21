@@ -17,3 +17,7 @@ terraform.tfvars.json
 
 # Ignore lock Terraform configuration files
 .terraform.lock.hcl
+
+# Ignore key files
+.pem
+.ppk
