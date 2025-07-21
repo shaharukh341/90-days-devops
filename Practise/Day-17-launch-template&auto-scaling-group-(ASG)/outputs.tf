@@ -1,7 +1,3 @@
-output "instance_id" {
-  value = aws_instance.demo.id
-}
-
-output "environment" {
-  value = local.env
+output "asg_name" {
+  value = aws_autoscaling_group.web_asg.name
 }

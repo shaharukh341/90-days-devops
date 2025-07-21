@@ -1,22 +1,16 @@
-variable "region" {
-  type        = string
-  default     = "us-east-1"
-  description = "AWS Region"
+variable "aws_region" {
+  default = "us-east-1"
+}
+
+variable "ami_id" {
+  description = "AMI ID to use"
+  default     = "ami-0c02fb55956c7d316" # Amazon Linux 2 AMI for us-east-1
 }
 
 variable "instance_type" {
-  type        = string
-  default     = "t2.micro"
-  description = "EC2 instance type"
+  default = "t2.micro"
 }
 
-variable "project" {
-  type        = string
-  default     = "devops"
-  description = "Project name for tagging"
-}
-
-variable "is_production" {
-  type        = bool
-  default     = false
+variable "key_name" {
+  description = "Name of existing EC2 Key Pair"
 }
