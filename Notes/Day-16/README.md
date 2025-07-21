@@ -22,3 +22,19 @@ This example demonstrates:
 terraform init
 terraform plan
 terraform apply
+
+
+# Day 16 – Advanced EC2 Provisioning with remote-exec using Existing SSH Key
+
+## ✅ Objective
+
+Provision an EC2 instance using Terraform with:
+- An **existing SSH key pair** (`.pub`)
+- **remote-exec provisioner** to automate bootstrapping
+- Optional: EBS volume attachment, Elastic IP
+- Best practices in file separation and Terraform variables
+
+---
+
+## 📁 Folder Structure
+
